@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VALKA ESTUDIO | Arquitectura + Diseño</title>
+  <meta name="description" content="Diseñamos espacios que mejoran la forma de vivir, trabajar y conectar con quienes somos. Arquitectura comercial, residencial, remodelaciones y mobiliario a medida en Licán Ray, Pucón, Villarrica y Santiago, Chile." />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='24' font-family='serif' font-size='24' font-weight='bold' fill='%231C1B19'>V</text></svg>" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/styles.css?v=12" />
+  <link rel="stylesheet" href="css/components.css?v=12" />
+
+  <style>
+    /* Direct High-Specificity Overrides for Hero Header */
+    .hero-header-bar .brand-logo .logo-valka-svg {
+      color: #FFFFFF !important;
+      height: 1.65rem !important;
+      filter: drop-shadow(0 2px 12px rgba(0,0,0,0.8)) !important;
+    }
+
+    .hero-header-bar .brand-logo .logo-estudio {
+      color: #FFFFFF !important;
+      font-size: 0.72rem !important;
+      font-weight: 600 !important;
+      letter-spacing: 0.44em !important;
+      margin-top: 0.35rem !important;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8) !important;
+    }
+
+    .hero-header-bar .menu-toggle-btn {
+      color: #FFFFFF !important;
+      font-size: 1.02rem !important;
+      font-weight: 600 !important;
+      letter-spacing: 0.22em !important;
+      text-shadow: 0 2px 12px rgba(0, 0, 0, 0.8) !important;
+    }
+
+    .hero-header-bar .menu-toggle-btn .menu-bars span {
+      background-color: #FFFFFF !important;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.8) !important;
+      height: 2px !important;
+      width: 22px !important;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- =========================================================================
+       MENÚ PRINCIPAL (Full-Screen Overlay Modal - Exact Mockup Screen 2)
+       ========================================================================= -->
+  <div id="menu-overlay" class="menu-overlay" role="dialog" aria-modal="true" aria-label="Menú principal">
+    <div class="menu-overlay-header">
+      <a href="#home" class="brand-logo" onclick="ValkaApp.closeMenu()">
+        <svg class="logo-valka-svg" viewBox="0 0 130 38" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="VALKA" role="img">
+            <!-- V -->
+            <polyline points="0,2 10,36 20,2" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" fill="none"/>
+            <!-- A (sin travesaño) -->
+            <polyline points="33,2 43,36" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
+            <polyline points="33,2 23,36" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
+            <!-- L -->
+            <polyline points="50,2 50,36 70,36" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" fill="none"/>
+            <!-- K -->
+            <line x1="77" y1="2" x2="77" y2="36" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <polyline points="77,21 97,2" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
+            <polyline points="77,21 97,36" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
+            <!-- A (sin travesaño) -->
+            <polyline points="117,2 107,36" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
+            <polyline points="117,2 127,36" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
+          </svg>
+        <span class="logo-estudio">ESTUDIO</span>
+      </a>
+      <button id="menu-close-btn" class="menu-close-btn" aria-label="Cerrar menú">✕</button>
+    </div>
+
+    <div class="menu-overlay-content">
+      <ul class="menu-links-list">
+        <li class="menu-link-item"><a href="#home">Inicio</a></li>
+        <li class="menu-link-item"><a href="#proyectos">Proyectos</a></li>
+        <li class="menu-link-item"><a href="#servicios">Servicios</a></li>
+        <li class="menu-link-item"><a href="#enfoque">Nuestro enfoque</a></li>
+        <li class="menu-link-item"><a href="#sobre-nosotros">Sobre nosotros</a></li>
+        <li class="menu-link-item"><a href="#blog">Blog</a></li>
+        <li class="menu-link-item"><a href="#contacto">Contacto</a></li>
+      </ul>
+    </div>
+
+    <div class="menu-overlay-footer">
+      <div class="menu-footer-contact">
+        <a href="tel:+56953420995">+56 9 5342 0995</a>
+        <a href="mailto:hola@valkaestudio.cl">hola@valkaestudio.cl</a>
+      </div>
+      <div class="menu-footer-social">
+        <a href="https://www.instagram.com/valkaestudio.cl?stkn=MTBuYzBoMGd4YmRoOA==" target="_blank" rel="noopener" aria-label="Instagram de Valka Estudio">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       MAIN VIEWS WRAPPER
+       ========================================================================= -->
+  <main id="main-content">
+
+    <!-- Subpage Top Header (Visible solo en subpáginas como Servicios, Proyectos, etc.) -->
+    <header id="subpage-header" class="subpage-header" style="display: none;">
+      <div class="container subpage-header-inner">
+        <a href="#home" class="brand-logo" aria-label="VALKA ESTUDIO">
+          <svg class="logo-valka-svg" viewBox="0 0 130 38" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="VALKA" role="img">
+            <!-- V -->
+            <polyline points="0,2 10,36 20,2" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" fill="none"/>
+            <!-- A (sin travesaño) -->
+            <polyline points="33,2 43,36" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
+            <polyline points="33,2 23,36" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
+            <!-- L -->
+            <polyline points="50,2 50,36 70,36" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" fill="none"/>
+            <!-- K -->
+            <line x1="77" y1="2" x2="77" y2="36" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <polyline points="77,21 97,2" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
+            <polyline points="77,21 97,36" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
+            <!-- A (sin travesaño) -->
+            <polyline points="117,2 107,36" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
+            <polyline points="117,2 127,36" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
+          </svg>
+          <span class="logo-estudio">ESTUDIO</span>
+        </a>
+        <button class="menu-toggle-btn" aria-label="Abrir menú de navegación">
+          <span>MENU</span>
+          <div class="menu-bars">
+            <span></span>
+            <span></span>
+          </div>
+        </button>
+      </div>
+    </header>
+
+    <!-- =======================================================================
+         VIEW 1: PÁGINA PRINCIPAL (HOME)
+         ======================================================================= -->
+    <section id="view-home" class="view-section active-view">
+      <!-- 1.1 Hero Section -->
+      <div class="home-hero">
+        <!-- Video Background Backdrop (2 capas de crossfade para reproducción 1 a 1 de fondo) -->
+        <div class="hero-video-backdrop">
+          <video id="hero-vid-a" class="hero-video-layer is-visible" src="https://5xny1a6zhnuiyth5.public.blob.vercel-storage.com/V01.mp4" autoplay muted loop playsinline></video>
+          <video id="hero-vid-b" class="hero-video-layer" muted loop playsinline></video>
+          <div class="hero-video-layer-overlay"></div>
+        </div>
+
+        <!-- Top Bar DIRECTLY INSIDE Hero Section Frame -->
+        <div class="hero-header-bar">
+          <div class="container hero-header-inner">
+            <a href="#home" class="brand-logo logo-white" aria-label="VALKA ESTUDIO Home">
+              <svg class="logo-valka-svg" viewBox="0 0 130 38" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="VALKA" role="img" style="color: #FFFFFF !important; filter: drop-shadow(0 2px 12px rgba(0,0,0,0.8)) !important;">
+                <!-- V -->
+                <polyline points="0,2 10,36 20,2" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" fill="none"/>
+                <!-- A (sin travesaño) -->
+                <polyline points="33,2 43,36" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
+                <polyline points="33,2 23,36" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
+                <!-- L -->
+                <polyline points="50,2 50,36 70,36" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" fill="none"/>
+                <!-- K -->
+                <line x1="77" y1="2" x2="77" y2="36" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <polyline points="77,21 97,2" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
+                <polyline points="77,21 97,36" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
+                <!-- A (sin travesaño) -->
+                <polyline points="117,2 107,36" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
+                <polyline points="117,2 127,36" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
+              </svg>
+              <span class="logo-estudio" style="color: #FFFFFF !important; font-size: 0.72rem !important; font-weight: 600 !important; letter-spacing: 0.44em !important; margin-top: 0.35rem !important; text-shadow: 0 2px 10px rgba(0,0,0,0.8) !important;">ESTUDIO</span>
+            </a>
+
+            <button class="menu-toggle-btn menu-btn-white" aria-label="Abrir menú de navegación" style="color: #FFFFFF !important; font-size: 1.02rem !important; font-weight: 600 !important; letter-spacing: 0.22em !important; text-shadow: 0 2px 12px rgba(0,0,0,0.8) !important;">
+              <span style="color: #FFFFFF !important;">MENU</span>
+              <div class="menu-bars">
+                <span style="background-color: #FFFFFF !important; height: 2px !important; width: 22px !important; box-shadow: 0 2px 6px rgba(0,0,0,0.8) !important;"></span>
+                <span style="background-color: #FFFFFF !important; height: 2px !important; width: 22px !important; box-shadow: 0 2px 6px rgba(0,0,0,0.8) !important;"></span>
+              </div>
+            </button>
+          </div>
+        </div>
+
+        <!-- Center Hero Text Content -->
+        <div class="container hero-content-container">
+          <div class="home-hero-content">
+            <h1 class="home-hero-title">
+              Diseñamos espacios que mejoran la forma de vivir, trabajar y conectar con quienes somos.
+            </h1>
+            <a href="#contacto" class="home-hero-cta">
+              Conversemos sobre tu proyecto <span style="font-family: sans-serif;">→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 1.2 Quotation Manifesto Banner -->
+      <div class="home-quote-section">
+        <div class="container">
+          <p class="home-quote-text">
+            Creemos que la arquitectura tiene la capacidad de transformar el bienestar cotidiano.
+          </p>
+        </div>
+      </div>
+
+      <!-- 1.3 Alternating Bento Editorial Grid (5 Services) -->
+      <div class="editorial-bento-grid">
+        <!-- Row 1: Arquitectura Comercial (Text Left, Image Right) -->
+        <div class="bento-row">
+          <div class="bento-text-block">
+            <h2 class="bento-title">
+              Espacios con enfoque humano
+              <span>Arquitectura Comercial</span>
+            </h2>
+            <a href="#servicios?id=comercial" class="link-arrow">Ver proyectos →</a>
+          </div>
+          <div class="bento-image-block">
+            <img src="assets/images/services/service-comercial.jpg?v=7" alt="Arquitectura Comercial Valka Estudio" loading="lazy" />
+          </div>
+        </div>
+
+        <!-- Row 2: Arquitectura Residencial (Image Left, Text Right) -->
+        <div class="bento-row reverse-mobile">
+          <div class="bento-image-block">
+            <img src="assets/images/services/service-residencial.png?v=4" alt="Arquitectura Residencial Valka Estudio" loading="lazy" />
+          </div>
+          <div class="bento-text-block">
+            <h2 class="bento-title">
+              Hogares con propósito
+              <span>Arquitectura Residencial</span>
+            </h2>
+            <a href="#servicios?id=residencial" class="link-arrow">Ver proyectos →</a>
+          </div>
+        </div>
+
+        <!-- Row 3: Mobiliario Personalizado (Text Left, Image Right) -->
+        <div class="bento-row">
+          <div class="bento-text-block">
+            <h2 class="bento-title">
+              Diseño que nace junto al espacio
+              <span>Mobiliario Personalizado</span>
+            </h2>
+            <a href="#servicios?id=mobiliario" class="link-arrow">Ver proyectos →</a>
+          </div>
+          <div class="bento-image-block">
+            <img src="assets/images/services/service-mobiliario.jpg?v=3" alt="Mobiliario a Medida Valka Estudio" loading="lazy" />
+          </div>
+        </div>
+
+        <!-- Row 4: Remodelaciones Integrales (Image Left, Text Right) -->
+        <div class="bento-row reverse-mobile">
+          <div class="bento-image-block">
+            <img src="assets/images/services/service-remodelaciones.jpg?v=3" alt="Remodelaciones Integrales Valka Estudio" loading="lazy" />
+          </div>
+          <div class="bento-text-block">
+            <h2 class="bento-title">
+              Transformar antes que reemplazar
+              <span>Remodelaciones Integrales</span>
+            </h2>
+            <a href="#servicios?id=remodelaciones" class="link-arrow">Ver proyectos →</a>
+          </div>
+        </div>
+
+        <!-- Row 5: Regularización y Asesoría Técnica (Text Left, Image Right) -->
+        <div class="bento-row">
+          <div class="bento-text-block">
+            <h2 class="bento-title">
+              Gestión Normativa y Planimetría
+              <span>Regularización y Asesoría Técnica</span>
+            </h2>
+            <a href="#servicios?id=regularizacion" class="link-arrow">Ver más →</a>
+          </div>
+          <div class="bento-image-block">
+            <img src="assets/images/services/service-regularizacion.jpg?v=2" alt="Regularización y Planimetría Valka Estudio" loading="lazy" />
+          </div>
+        </div>
+      </div>
+
+      <!-- 1.4 Nuestro Enfoque Banner Section -->
+      <div class="home-enfoque-card">
+        <div class="container">
+          <div class="home-enfoque-content">
+            <h2 class="home-enfoque-title">Nuestro enfoque</h2>
+            <p class="home-enfoque-desc">
+              Diseñamos desde las personas para crear espacios que cuiden, inspiren y mejoren la calidad de vida.
+            </p>
+            <a href="#enfoque" class="link-arrow link-arrow-light">Conoce más sobre nosotros →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         VIEW 2: SUB PÁGINAS - SERVICIOS (Exact Mockup Screen 3)
+         ======================================================================= -->
+    <section id="view-servicios" class="view-section subpage-container">
+      <div class="container">
+        <!-- Breadcrumbs -->
+        <nav class="breadcrumbs" aria-label="Migas de pan">
+          <a href="#home">Inicio</a>
+          <span class="separator">/</span>
+          <a href="#servicios">Servicios</a>
+          <span class="separator">/</span>
+          <span id="service-breadcrumb-current" style="color: var(--text-primary); font-weight: 500;">Espacios con enfoque humano</span>
+        </nav>
+
+        <!-- Service Category Switcher Tabs -->
+        <div class="services-tabs-nav">
+          <button class="service-tab-btn active" data-service="comercial">Comercial</button>
+          <button class="service-tab-btn" data-service="residencial">Residencial</button>
+          <button class="service-tab-btn" data-service="mobiliario">Mobiliario Personalizado</button>
+          <button class="service-tab-btn" data-service="remodelaciones">Remodelaciones</button>
+          <button class="service-tab-btn" data-service="regularizacion">Regularización & Asesoría</button>
+        </div>
+
+        <!-- Split Hero Service Layout -->
+        <div class="service-split-hero">
+          <div class="service-split-text">
+            <h1 id="service-detail-title" class="service-split-title">
+              Espacios con enfoque humano (Arquitectura Comercial)
+            </h1>
+            <p id="service-detail-desc" class="service-split-desc">
+              Diseñamos espacios de trabajo, comercio y servicios que potencian la productividad, la experiencia y el bienestar de las personas.
+            </p>
+            <ul id="service-detail-benefits" class="service-benefits-list">
+              <li class="service-benefit-item">Optimización del espacio</li>
+              <li class="service-benefit-item">Eficiencia y confort</li>
+              <li class="service-benefit-item">Materiales en armonia</li>
+            </ul>
+            <div>
+              <a href="#contacto" class="btn btn-outline">
+                Conversemos sobre tu proyecto <span style="font-family: sans-serif;">→</span>
+              </a>
+            </div>
+          </div>
+          <div class="service-split-image">
+            <img id="service-detail-image" src="assets/images/services/servicios-hero-comercial.jpg?v=5" alt="Servicio Valka Estudio" />
+          </div>
+        </div>
+
+        <!-- Featured Projects in Services -->
+        <div class="featured-projects-section">
+          <h3 class="section-subtitle-heading">Proyectos destacados</h3>
+          <div id="service-featured-projects" class="featured-projects-row">
+            <!-- Dynamically populated via JS -->
+          </div>
+          <div class="center-btn-wrapper">
+            <a href="#proyectos" class="link-arrow">Ver todos los proyectos →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         VIEW 3: SUB PÁGINAS - PROYECTOS (Exact Mockup Screen 4)
+         ======================================================================= -->
+    <section id="view-proyectos" class="view-section subpage-container">
+      <div class="container">
+        <h1 class="subpage-header-title">Proyectos</h1>
+
+        <!-- Filter Tabs (Mockup: Todos, Comercial, Residencial, Interiorismo, Remodelaciones, Mobiliario) -->
+        <div class="projects-filter-bar">
+          <button class="filter-tab-btn active" data-filter="all">Todos</button>
+          <button class="filter-tab-btn" data-filter="comercial">Comercial</button>
+          <button class="filter-tab-btn" data-filter="residencial">Residencial</button>
+          <button class="filter-tab-btn" data-filter="interiorismo">Interiorismo</button>
+          <button class="filter-tab-btn" data-filter="remodelaciones">Remodelaciones</button>
+          <button class="filter-tab-btn" data-filter="mobiliario">Mobiliario</button>
+        </div>
+
+        <!-- 3-Column Projects Grid -->
+        <div id="projects-main-grid" class="projects-grid-main">
+          <!-- Dynamically populated via JS -->
+        </div>
+
+        <div class="center-btn-wrapper">
+          <a href="#contacto" class="btn btn-outline">Consultar por un proyecto a medida →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         VIEW 4: SUB PÁGINA - NUESTRO ENFOQUE (Exact Mockup Screen 5)
+         ======================================================================= -->
+    <section id="view-enfoque" class="view-section subpage-container">
+      <div class="container">
+        <!-- Botanical Backdrop Hero Header -->
+        <div class="enfoque-hero-wrapper">
+          <div class="enfoque-hero-content">
+            <h1 class="enfoque-main-title">Nuestro enfoque</h1>
+            <p class="enfoque-main-paragraph">
+              Diseñamos desde las personas.<br />
+              Cada proyecto nace de entender las necesidades, los hábitos y los sueños de quienes lo habitarán.
+            </p>
+          </div>
+        </div>
+
+        <!-- 4 Core Pillars Grid (Mockup: Humano, Consciente, Funcional, Integral) -->
+        <div class="enfoque-pillars-grid">
+          <!-- Pillar 1: Humano -->
+          <div class="pillar-card">
+            <div class="pillar-icon-box">
+              <img src="assets/icons/human.svg" alt="Pilar Humano" />
+            </div>
+            <h3 class="pillar-name">Humano</h3>
+            <p class="pillar-desc">
+              Ponemos a las personas en el centro de cada decisión de diseño.
+            </p>
+          </div>
+
+          <!-- Pillar 2: Consciente -->
+          <div class="pillar-card">
+            <div class="pillar-icon-box">
+              <img src="assets/icons/conscious.svg" alt="Pilar Consciente" />
+            </div>
+            <h3 class="pillar-name">Consciente</h3>
+            <p class="pillar-desc">
+              Respetamos el entorno natural y construimos con responsabilidad.
+            </p>
+          </div>
+
+          <!-- Pillar 3: Funcional -->
+          <div class="pillar-card">
+            <div class="pillar-icon-box">
+              <img src="assets/icons/functional.svg" alt="Pilar Funcional" />
+            </div>
+            <h3 class="pillar-name">Funcional</h3>
+            <p class="pillar-desc">
+              Diseñamos espacios bellos, eficientes y adaptados a la vida real.
+            </p>
+          </div>
+
+          <!-- Pillar 4: Integral -->
+          <div class="pillar-card">
+            <div class="pillar-icon-box">
+              <img src="assets/icons/integral.svg" alt="Pilar Integral" />
+            </div>
+            <h3 class="pillar-name">Integral</h3>
+            <p class="pillar-desc">
+              Acompañamos todo el proceso, desde la idea hasta la materialización.
+            </p>
+          </div>
+        </div>
+
+        <!-- Philosophical Statement from FRASES VALKA -->
+        <div style="background-color: var(--bg-secondary); padding: 3.5rem 3rem; border-radius: var(--radius-sm); text-align: center; max-width: 920px; margin: 0 auto;">
+          <h4 style="font-family: var(--font-serif); font-size: 1.6rem; margin-bottom: 1rem; color: var(--text-primary);">
+            "La arquitectura no transforma solamente los espacios; transforma la experiencia de habitarlos."
+          </h4>
+          <p style="font-size: 0.95rem; color: var(--text-secondary); max-width: 720px; margin: 0 auto 1.8rem;">
+            Nos inspira la naturaleza. Nos guía la funcionalidad. Nos mueve la búsqueda constante de bienestar cotidiano.
+          </p>
+          <a href="#contacto" class="btn btn-primary">Iniciar conversación →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         VIEW 5: SUB PÁGINA - SOBRE NOSOTROS (Exact Mockup Screen 6)
+         ======================================================================= -->
+    <section id="view-sobre-nosotros" class="view-section subpage-container">
+      <div class="container">
+        <div class="about-split-layout">
+          <!-- Founders Photo at Drafting Table -->
+          <div class="about-photo-wrapper">
+            <img src="assets/images/about-daniela-sebastian.jpg?v=2" alt="Daniela y Aldo - Arquitectos Fundadores VALKA ESTUDIO" />
+          </div>
+
+          <!-- Bio & Story -->
+          <div class="about-text-content">
+            <div class="about-founders-subtitle">
+              Somos Daniela y Aldo, fundadores de VALKA ESTUDIO
+            </div>
+            <p class="about-bio-text">
+              Creemos en una arquitectura que mejora la vida de las personas, que es coherente, honesta y pensada para durar.
+            </p>
+            <p class="about-bio-text">
+              Nos inspira la naturaleza, el diseño consciente y la búsqueda constante de espacios que generen bienestar. Desde nuestro taller en el sur de Chile hasta proyectos en la capital, acompañamos cada encargo con dedicación personalizada y excelencia constructiva.
+            </p>
+
+            <div class="about-values-grid">
+              <div class="about-value-item">
+                <h5>Escucha Activa</h5>
+                <p>Comprender a las personas antes de trazar los planos.</p>
+              </div>
+              <div class="about-value-item">
+                <h5>Diseño Consciente</h5>
+                <p>Respeto profundo por el paisaje y la luz natural.</p>
+              </div>
+              <div class="about-value-item">
+                <h5>Honestidad Material</h5>
+                <p>Maderas nobles, piedras locales y texturas táctiles.</p>
+              </div>
+              <div class="about-value-item">
+                <h5>Acompañamiento</h5>
+                <p>Presencia rigurosa en cada etapa del proyecto.</p>
+              </div>
+            </div>
+
+            <div>
+              <a href="#contacto" class="link-arrow">Conoce nuestra historia & Contáctanos →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         VIEW 6: SUB PÁGINA - CONTACTO (Exact Mockup Screen 7)
+         ======================================================================= -->
+    <section id="view-contacto" class="view-section subpage-container">
+      <div class="container">
+        <div class="contact-split-layout">
+          <!-- Col 1: Contact Details -->
+          <div class="contact-info-col">
+            <h1 class="contact-main-heading">Hablemos de tu proyecto</h1>
+            <p class="contact-lead-sub">
+              Cuéntanos tu idea y te acompañaremos en cada etapa.
+            </p>
+
+            <div class="contact-items-list">
+              <div class="contact-item-row">
+                <span class="contact-item-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                  </svg>
+                </span>
+                <a href="tel:+56953420995">+56 9 5342 0995</a>
+              </div>
+
+              <div class="contact-item-row">
+                <span class="contact-item-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                </span>
+                <a href="mailto:hola@valkaestudio.cl">hola@valkaestudio.cl</a>
+              </div>
+
+              <div class="contact-item-row">
+                <span class="contact-item-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                </span>
+                <span>Licán Ray, Región de La Araucanía / Santiago</span>
+              </div>
+
+              <div class="contact-item-row">
+                <span class="contact-item-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                  </svg>
+                </span>
+                <a href="https://www.instagram.com/valkaestudio.cl?stkn=MTBuYzBoMGd4YmRoOA==" target="_blank" rel="noopener">@valka.estudio</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Col 2: Interactive Form (Nombre, Correo, Teléfono, Mensaje) -->
+          <div class="contact-form-col">
+            <form id="contact-main-form">
+              <div class="form-group">
+                <label for="contact-name" class="form-label">Nombre</label>
+                <input type="text" id="contact-name" class="form-control" placeholder="Tu nombre y apellido" required />
+              </div>
+
+              <div class="form-group">
+                <label for="contact-email" class="form-label">Correo electrónico</label>
+                <input type="email" id="contact-email" class="form-control" placeholder="tu@email.com" required />
+              </div>
+
+              <div class="form-group">
+                <label for="contact-phone" class="form-label">Teléfono</label>
+                <input type="tel" id="contact-phone" class="form-control" placeholder="+56 9 5342 0995" />
+              </div>
+
+              <div class="form-group">
+                <label for="contact-message" class="form-label">Cuéntanos sobre tu proyecto</label>
+                <textarea id="contact-message" class="form-control" placeholder="Tipo de proyecto, ubicación, requerimientos..."></textarea>
+              </div>
+
+              <button type="submit" class="form-submit-btn">Enviar mensaje</button>
+            </form>
+          </div>
+
+          <!-- Col 3: Atmospheric Vase Image -->
+          <div class="contact-image-col">
+            <img src="assets/images/contact-vase.jpg" alt="Detalle interior Valka Estudio" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         VIEW 7: SUB PÁGINA - BLOG / JOURNAL
+         ======================================================================= -->
+    <section id="view-blog" class="view-section subpage-container">
+      <div class="container">
+        <h1 class="subpage-header-title">Blog & Pensamiento</h1>
+        <p style="font-size: 1rem; color: var(--text-secondary); max-width: 680px; margin-bottom: 3rem;">
+          Reflexiones, ideas de diseño y aprendizajes sobre cómo la arquitectura transforma la experiencia de habitar.
+        </p>
+
+        <div id="blog-main-grid" class="blog-grid">
+          <!-- Dynamically populated via JS -->
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================================================================
+       GLOBAL FOOTER (Exact Mockup Bottom Strip)
+       ========================================================================= -->
+  <footer class="global-footer">
+    <div class="container footer-inner">
+      <!-- Logo Left -->
+      <a href="#home" class="brand-logo" aria-label="VALKA ESTUDIO">
+        <span class="logo-valka" style="font-size: 1.15rem;">VALKA</span>
+        <span class="logo-estudio" style="font-size: 0.52rem;">ESTUDIO</span>
+      </a>
+
+      <!-- Center Ticker Specialties -->
+      <div class="footer-ticker">
+        ARQUITECTURA COMERCIAL <span>•</span> ARQUITECTURA RESIDENCIAL <span>•</span> REMODELACIONES <span>•</span> MOBILIARIO PERSONALIZADO <span>•</span> REGULARIZACIONES <span>•</span> ASESORÍA TÉCNICA
+      </div>
+
+      <!-- Right Contact Info -->
+      <div class="footer-contact-info">
+        <a href="mailto:hola@valkaestudio.cl">hola@valkaestudio.cl</a>
+        <span>|</span>
+        <a href="tel:+56953420995">+56 9 5342 0995</a>
+        <a href="https://www.instagram.com/valkaestudio.cl?stkn=MTBuYzBoMGd4YmRoOA==" target="_blank" rel="noopener" class="footer-social-icon" aria-label="Instagram">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <div style="text-align: center; font-size: 0.75rem; color: var(--text-muted); margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--border-subtle); font-family: var(--font-sans); letter-spacing: 0.05em;">
+      Diseñado por <a href="https://mutiny.cl" target="_blank" style="color: inherit; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='var(--text-primary)'" onmouseout="this.style.color='inherit'">Mutiny.cl</a>
+    </div>
+  </footer>  <!-- =========================================================================
+       MODAL LIGHTBOX (PROJECT DETAILS & ARTICLE READER)
+       ========================================================================= -->
+  <div id="project-modal" class="modal-overlay" role="dialog" aria-modal="true">
+    <div class="modal-dialog">
+      <button id="modal-close-btn" class="modal-close-btn" aria-label="Cerrar modal">✕</button>
+      <div id="modal-dynamic-content">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- Floating WhatsApp Quick Button -->
+  <a href="https://wa.me/56953420995?text=Hola%20Valka%20Estudio,%20quisiera%20conversar%20sobre%20un%20proyecto" target="_blank" rel="noopener" class="whatsapp-float-btn" aria-label="Chat directo por WhatsApp">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+    </svg>
+  </a>
+
+  <!-- Scripts -->
+  <script src="js/data.js?v=9"></script>
+  <script src="js/app.js?v=3"></script>
+</body>
+</html>
